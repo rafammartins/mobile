@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fundo">
+
+    <!-- HOME PLAYER/TEAM -->
+    <TextView
+        android:id="@+id/itemGameRecordHomePlayerName"
+        android:textColor="@color/colorHomeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordHomePlayerScore"
+        tools:text="Teste"/>
+
+    <TextView
+        android:id="@+id/itemGameRecordHomePlayerScore"
+        android:textColor="@color/colorHomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordDivisor"
+        tools:text="03" />
+
+    <TextView
+        android:id="@+id/itemGameRecordHomeTrucoOfOneText"
+        android:textColor="@color/colorHomeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="end"
+        android:text="@string/TrucoOfOne"
+        android:textSize="10sp"
+        android:padding="2dp"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordHomePlayerName"
+        app:layout_constraintBottom_toTopOf="@id/itemGameRecordHomeTrucoOfThreeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordHomePlayerScore"
+        />
+
+    <TextView
+        android:id="@+id/itemGameRecordHomeTrucoOfOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textColor="@color/colorHomeText"
+        android:textSize="10sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordHomePlayerScore"
+        app:layout_constraintBottom_toTopOf="@id/itemGameRecordHomeTrucoOfThree"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordDivisor"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordHomeTrucoOfOneText"
+        tools:text="01" />
+
+    <TextView
+        android:id="@+id/itemGameRecordHomeTrucoOfThreeText"
+        android:textColor="@color/colorHomeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/TrucoOfThree"
+        android:textSize="10sp"
+        android:padding="2dp"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordHomeTrucoOfThreeText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordHomePlayerScore"
+        />
+
+    <TextView
+        android:id="@+id/itemGameRecordHomeTrucoOfThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textSize="10sp"
+        android:textColor="@color/colorHomeText"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordHomeTrucoOfThree"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordHomeTrucoOfThreeText"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordDivisor"
+        tools:text="03" />
+
+    <TextView
+        android:id="@+id/itemGameRecordDivisor"
+        android:textColor="@color/textPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- AWAY Player/TEAM -->
+    <TextView
+        android:id="@+id/itemGameRecordAwayPlayerScore"
+        android:textColor="@color/colorAwayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordDivisor"
+        tools:text="02" />
+
+    <TextView
+        android:id="@+id/itemGameRecordAwayPlayerName"
+        android:textColor="@color/colorAwayText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordAwayPlayerScore"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordDelete"
+        tools:text="Teste"/>
+
+    <TextView
+        android:id="@+id/itemGameRecordAwayTrucoOfOneText"
+        android:textColor="@color/colorAwayText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="start"
+        android:text="@string/TrucoOfOne"
+        android:textSize="10sp"
+        android:padding="2dp"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordAwayPlayerName"
+        app:layout_constraintBottom_toTopOf="@id/itemGameRecordAwayTrucoOfThreeText"
+        app:layout_constraintStart_toEndOf="@+id/itemGameRecordAwayPlayerScore"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordDelete"
+        />
+
+    <TextView
+        android:id="@+id/itemGameRecordAwayTrucoOfOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textColor="@color/colorAwayText"
+        android:textSize="10sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordAwayPlayerScore"
+        app:layout_constraintBottom_toTopOf="@id/itemGameRecordAwayTrucoOfThreeText"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordAwayTrucoOfOneText"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordDivisor"
+        tools:text="01" />
+
+    <TextView
+        android:id="@+id/itemGameRecordAwayTrucoOfTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textColor="@color/colorAwayText"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordAwayTrucoOfOne"
+        app:layout_constraintBottom_toTopOf="@id/itemGameRecordAwayTrucoOfThree"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordAwayTrucoOfThreeText"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordDivisor"
+        tools:text="02" />
+
+    <TextView
+        android:id="@+id/itemGameRecordAwayTrucoOfThreeText"
+        android:textColor="@color/colorAwayText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/TrucoOfThree"
+        android:textSize="10sp"
+        android:padding="2dp"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordAwayTrucoOfThreeText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemGameRecordAwayPlayerScore"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordDelete"
+        />
+
+    <TextView
+        android:id="@+id/itemGameRecordAwayTrucoOfThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textColor="@color/colorAwayText"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@id/itemGameRecordAwayTrucoOfOne"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/itemGameRecordAwayTrucoOfThreeText"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordDivisor"
+        tools:text="03" />
+
+    <ImageView
+        android:id="@+id/itemGameRecordDelete"
+        android:textColor="@color/textPrimary"
+        android:background="@color/colorAccent"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:padding="10dp"
+        android:src="@android:drawable/ic_menu_delete"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/itemGameRecordAwayPlayerName"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

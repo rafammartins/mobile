@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PlacApp</string>
+
+    <string name="homeMessage">Transforme seus jogos em momentos inesquecíveis</string>
+    <string name="homeNewGame">Novo Jogo</string>
+    <string name="homeRecords">Histórico</string>
+    <string name="homeExit">Sair</string>
+
+    <string name="preGameHomePlayerLabel">Jogador/Time da casa:</string>
+    <string name="preGameAwayPlayerLabel">Jogador/Time visitantes:</string>
+    <string name="preGameStart">Iniciar Partida</string>
+
+    <string name="TrucoOfOne">Aumenta 1 ponto</string>
+    <string name="TrucoOfThree">Aumenta 3 pontos</string>
+
+    <string name="scoreGameExit">Sair</string>
+</resources>

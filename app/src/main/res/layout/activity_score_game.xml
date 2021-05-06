@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.ghostapps.placapp.viewModel.gameScore.GameScoreViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackGround">
+
+        <!-- Home Player/team -->
+        <TextView
+            android:id="@+id/gameScoreHomePlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:textColor="@color/colorHomeText"
+            android:text="@={viewModel.homePlayerName}"
+            app:layout_constraintBottom_toTopOf="@id/gameScoreHomeIncreaseThree"
+            app:layout_constraintEnd_toEndOf="@id/gameScoreHomePlayerScore"
+            app:layout_constraintStart_toStartOf="@id/gameScoreHomePlayerScore"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gameScoreHomeIncreaseOne"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="95dp"
+            android:text="+1"
+            android:textAlignment="center"
+            android:textColor="@color/colorHomeText"
+            android:textSize="23dp"
+            android:onClick="@{_ -> viewModel.onScoreHomeIncreaseOne()}"
+            app:layout_constraintBottom_toTopOf="@id/gameScoreHomePlayerScore"
+            app:layout_constraintEnd_toEndOf="@id/gameScoreHomePlayerScore"
+            app:layout_constraintStart_toStartOf="@id/gameScoreHomePlayerScore" />
+
+        <TextView
+            android:id="@+id/gameScoreHomeIncreaseThree"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="95dp"
+            android:text="+3"
+            android:textAlignment="center"
+            android:textColor="@color/colorHomeText"
+            android:textSize="23dp"
+            android:onClick="@{_ -> viewModel.onScoreHomeIncreaseThree()}"
+            app:layout_constraintBottom_toTopOf="@id/gameScoreHomePlayerScore"
+            app:layout_constraintEnd_toEndOf="@id/gameScoreHomePlayerScore"
+            app:layout_constraintStart_toStartOf="@id/gameScoreHomePlayerScore" />
+
+        <TextView
+            android:id="@+id/gameScoreHomePlayerScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="80dp"
+            android:text="@={viewModel.formattedHomePlayerScore}"
+            android:textColor="@color/colorHomeText"
+            android:textSize="80sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/gameScoreAwayPlayerScore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="00"/>
+
+        <!-- Away Player/team -->
+        <TextView
+            android:id="@+id/gameScoreAwayPlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="@={viewModel.awayPlayerName}"
+            android:textColor="@color/colorAwayText"
+            app:layout_constraintBottom_toTopOf="@id/gameScoreAwayIncreaseThree"
+            app:layout_constraintEnd_toEndOf="@id/gameScoreAwayPlayerScore"
+            app:layout_constraintStart_toStartOf="@id/gameScoreAwayPlayerScore"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gameScoreAwayIncreaseOne"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="95dp"
+            android:text="+1"
+            android:textAlignment="center"
+            android:textColor="@color/colorAwayText"
+            android:textSize="23dp"
+            android:onClick="@{_ -> viewModel.onScoreAwayIncreaseOne()}"
+            app:layout_constraintBottom_toTopOf="@id/gameScoreAwayPlayerScore"
+            app:layout_constraintEnd_toEndOf="@id/gameScoreAwayPlayerScore"
+            app:layout_constraintStart_toStartOf="@id/gameScoreAwayPlayerScore" />
+
+        <TextView
+            android:id="@+id/gameScoreAwayIncreaseThree"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="95dp"
+            android:text="+3"
+            android:textAlignment="center"
+            android:textColor="@color/colorAwayText"
+            android:textSize="23dp"
+            android:onClick="@{_ -> viewModel.onScoreAwayIncreaseThree()}"
+            app:layout_constraintBottom_toTopOf="@id/gameScoreAwayPlayerScore"
+            app:layout_constraintEnd_toEndOf="@id/gameScoreAwayPlayerScore"
+            app:layout_constraintStart_toStartOf="@id/gameScoreAwayPlayerScore" />
+
+        <TextView
+            android:id="@+id/gameScoreAwayPlayerScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:text="@={viewModel.formattedAwayPlayerScore}"
+            android:textColor="@color/colorAwayText"
+            android:textSize="80sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/gameScoreHomePlayerScore"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="00"/>
+
+        <!-- Exit button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/gameScoreExitButton"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="@string/scoreGameExit"
+            android:textColor="@android:color/white"
+            android:onClick="@{_ -> viewModel.onExitPressed()}"
+            app:cornerRadius="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ScorApp</string>
+
+    <string name="homeMessage">Make your matches amazing</string>
+    <string name="homeNewGame">New Game</string>
+    <string name="homeRecords">Records</string>
+    <string name="homeExit">Exit</string>
+
+    <string name="preGameHomePlayerLabel">Player/Home team:</string>
+    <string name="preGameAwayPlayerLabel">Player/Away team:</string>
+    <string name="preGameStart">Start match</string>
+
+    <string name="TrucoOfOne">UP One Point</string>
+    <string name="TrucoOfThree">UP Three Points</string>
+
+    <string name="scoreGameExit">Exit</string>
+
+
+</resources>

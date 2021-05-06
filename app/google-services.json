@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "1018400429469",
-    "project_id": "myscorapp",
-    "storage_bucket": "myscorapp.appspot.com"
+    "project_number": "952873793502",
+    "project_id": "scoreapp-fiap",
+    "storage_bucket": "scoreapp-fiap.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1018400429469:android:f9fb0bb9126578b098cb74",
+        "mobilesdk_app_id": "1:952873793502:android:36316b80828b46e75f0f4f",
         "android_client_info": {
           "package_name": "com.ghostapps.placapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1018400429469-6i55o72e65sb74su8168r30mslgkhl9g.apps.googleusercontent.com",
+          "client_id": "952873793502-odmcusb61bvd8l0p4lrmch3oqpqsmp10.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.ghostapps.placapp",
-            "certificate_hash": "7de14568a828fe5104cc7499a79c856c6d5e855f"
+            "certificate_hash": "fe45a0ed383722928a6b93948cb2e891d9c67a9f"
           }
         },
         {
-          "client_id": "1018400429469-qnrtrlho8hdk1blen0a4ctsfi7sndmdm.apps.googleusercontent.com",
+          "client_id": "952873793502-mdu9hbv9aqeiicmorp89d0vr6teom49d.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBnOIsOgtnLOyKldtlUh48BRpQAogEOzgM"
+          "current_key": "AIzaSyC0xxR92rJhJLu7Y6yU8QVQf4IKjc1dI68"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1018400429469-qnrtrlho8hdk1blen0a4ctsfi7sndmdm.apps.googleusercontent.com",
+              "client_id": "952873793502-mdu9hbv9aqeiicmorp89d0vr6teom49d.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
